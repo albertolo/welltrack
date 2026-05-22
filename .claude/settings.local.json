@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem *)",
+      "PowerShell(Head *)",
+      "PowerShell(Test-Path \"C:\\\\ai\\\\claude\\\\Welltrack\"; \\(Get-Item \"C:\\\\ai\\\\claude\\\\Welltrack\"\\).Attributes)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ai\\\\claude\\\\Welltrack\" -Force -Hidden | ForEach-Object { Write-Host $_.FullName })",
+      "PowerShell(ls -Recurse \"C:\\\\ai\\\\claude\\\\Welltrack\" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })"
+    ]
+  }
+}
