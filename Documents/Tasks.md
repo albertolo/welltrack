@@ -86,24 +86,24 @@ This document breaks down the WellTrack requirements into actionable development
 
 ### 1.9 Medication Log Endpoints
 
-- [ ] Implement `GET /api/medication-logs` - return logs with date range filtering
-- [ ] Implement `POST /api/medication-logs` - log medication taken/not taken
-- [ ] Implement `PATCH /api/medication-logs/:id` - update log
-- [ ] Implement `DELETE /api/medication-logs/:id` - delete log
+- [x] Implement `GET /api/medication-logs` - return logs with date range filtering
+- [x] Implement `POST /api/medication-logs` - log medication taken/not taken
+- [x] Implement `PATCH /api/medication-logs/:id` - update log
+- [x] Implement `DELETE /api/medication-logs/:id` - delete log
 
 ### 1.10 Habit Endpoints
 
-- [ ] Implement `GET /api/habits` - return system defaults + user's custom habits
-- [ ] Implement `POST /api/habits` - create custom habit with tracking_type (boolean/numeric/duration)
-- [ ] Implement `PATCH /api/habits/:id` - update habit details
-- [ ] Implement `DELETE /api/habits/:id` - delete custom habit
+- [x] Implement `GET /api/habits` - return system defaults + user's custom habits
+- [x] Implement `POST /api/habits` - create custom habit with tracking_type (boolean/numeric/duration)
+- [x] Implement `PATCH /api/habits/:id` - update habit details
+- [x] Implement `DELETE /api/habits/:id` - delete custom habit
 
 ### 1.11 Habit Log Endpoints
 
-- [ ] Implement `GET /api/habit-logs` - return logs with date range filtering
-- [ ] Implement `POST /api/habit-logs` - create log with appropriate value field based on tracking_type
-- [ ] Implement `PATCH /api/habit-logs/:id` - update log
-- [ ] Implement `DELETE /api/habit-logs/:id` - delete log
+- [x] Implement `GET /api/habit-logs` - return logs with date range filtering
+- [x] Implement `POST /api/habit-logs` - create log with appropriate value field based on tracking_type
+- [x] Implement `PATCH /api/habit-logs/:id` - update log
+- [x] Implement `DELETE /api/habit-logs/:id` - delete log
 
 ### 1.12 Backend Testing & Documentation
 
