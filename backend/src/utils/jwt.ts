@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 
 export interface TokenPayload {
@@ -15,7 +16,7 @@ export function generateRefreshToken(userId: string): string {
   const secret = process.env.JWT_REFRESH_SECRET;
   const expiresIn = process.env.JWT_REFRESH_EXPIRES_IN ?? '7d';
   if (!secret) throw new Error('JWT_REFRESH_SECRET is not set');
-  return jwt.sign({ userId }, secret, { expiresIn } as jwt.SignOptions);
+  return jwt.sign({ userId, jti: crypto.randomUUID() }, secret, { expiresIn } as jwt.SignOptions);
 }
 
 export function verifyAccessToken(token: string): TokenPayload {

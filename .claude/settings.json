@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\ai\\\\claude\\\\Welltrack\\\\backend\\\\tests\" -Force)",
+      "PowerShell(Get-ChildItem \"c:\\\\ai\\\\claude\\\\Welltrack\\\\backend\\\\node_modules\" -Directory | Where-Object { $_.Name -match \"jest\" } | Select-Object Name | Select-Object -First 10)",
+      "PowerShell(Get-ChildItem \"c:\\\\ai\\\\claude\\\\Welltrack\\\\backend\\\\node_modules\" -Directory | Where-Object { $_.Name -match \"jest\" } | Select-Object Name)",
+      "PowerShell(Get-ChildItem \"c:\\\\ai\\\\claude\\\\Welltrack\\\\node_modules\" -Directory | Where-Object { $_.Name -match \"jest\" } | Select-Object Name)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --title 'feat: implement POST /api/auth/register endpoint \\(Task 1.3\\)' --body ' *)",
+      "Bash(gh auth *)",
+      "Bash(docker start *)",
+      "Bash(npm test *)",
+      "Bash(node ../node_modules/prisma/build/index.js generate --schema=prisma/schema.prisma)",
+      "Bash(node node_modules/prisma/build/index.js generate --schema=backend/prisma/schema.prisma)",
+      "Bash(gh pr create --title 'feat: implement full auth system \\(Task 1.3\\)' --base main --body ' *)",
+      "Bash(gh pr create --title 'feat: implement GET/PATCH/DELETE /api/users/me endpoints \\(Task 1.4\\)' --base main --body ' *)",
+      "Bash(gh pr create --title 'feat: implement symptom and symptom log endpoints \\(Tasks 1.5, 1.6\\)' --base main --body ' *)",
+      "Bash(gh pr create --title 'feat: implement mood log and medication endpoints \\(Tasks 1.7, 1.8\\)' --base main --body ' *)",
+      "Bash(gh pr create --title 'feat: implement medication logs, habits, and habit log endpoints \\(Tasks 1.9-1.11\\)' --base main --body ' *)",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\ai\\\\claude\\\\Welltrack\\\\docs\")",
+      "Bash(gh pr create --title 'docs: add README and API documentation \\(Task 1.12\\)' --body ' *)"
+    ]
+  }
+}

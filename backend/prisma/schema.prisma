@@ -15,14 +15,15 @@ model User {
   timezone     String   @default("UTC")
   createdAt    DateTime @default(now()) @map("created_at")
 
-  symptoms       Symptom[]
-  symptomLogs    SymptomLog[]
-  moodLogs       MoodLog[]
-  medications    Medication[]
-  medicationLogs MedicationLog[]
-  habits         Habit[]
-  habitLogs      HabitLog[]
-  refreshTokens  RefreshToken[]
+  symptoms            Symptom[]
+  symptomLogs         SymptomLog[]
+  moodLogs            MoodLog[]
+  medications         Medication[]
+  medicationLogs      MedicationLog[]
+  habits              Habit[]
+  habitLogs           HabitLog[]
+  refreshTokens       RefreshToken[]
+  passwordResetTokens PasswordResetToken[]
 
   @@map("users")
 }
@@ -38,6 +39,20 @@ model RefreshToken {
 
   @@index([userId])
   @@map("refresh_tokens")
+}
+
+model PasswordResetToken {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  token     String   @unique
+  expiresAt DateTime @map("expires_at")
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("password_reset_tokens")
 }
 
 model Symptom {

@@ -35,83 +35,83 @@ This document breaks down the WellTrack requirements into actionable development
 
 ### 1.3 Authentication System
 
-- [ ] Create auth middleware to verify JWT tokens
-- [ ] Create utility function for hashing passwords with bcrypt
-- [ ] Create utility function for generating access tokens (short-lived)
-- [ ] Create utility function for generating refresh tokens (long-lived)
-- [ ] Implement `POST /api/auth/register` - validate input, check email uniqueness, hash password, create user, return tokens
-- [ ] Implement `POST /api/auth/login` - validate credentials, return tokens
-- [ ] Implement `POST /api/auth/refresh` - validate refresh token, issue new access token
-- [ ] Implement `POST /api/auth/logout` - invalidate refresh token (add to blocklist or delete from DB)
-- [ ] Implement `POST /api/auth/forgot-password` - generate reset token, log to console (email TBD)
-- [ ] Implement `POST /api/auth/reset-password` - validate reset token, update password
-- [ ] Add input validation using Zod for all auth endpoints
-- [ ] Add proper error handling and HTTP status codes
+- [x] Create auth middleware to verify JWT tokens
+- [x] Create utility function for hashing passwords with bcrypt
+- [x] Create utility function for generating access tokens (short-lived)
+- [x] Create utility function for generating refresh tokens (long-lived)
+- [x] Implement `POST /api/auth/register` - validate input, check email uniqueness, hash password, create user, return tokens
+- [x] Implement `POST /api/auth/login` - validate credentials, return tokens
+- [x] Implement `POST /api/auth/refresh` - validate refresh token, issue new access token
+- [x] Implement `POST /api/auth/logout` - invalidate refresh token (add to blocklist or delete from DB)
+- [x] Implement `POST /api/auth/forgot-password` - generate reset token, log to console (email TBD)
+- [x] Implement `POST /api/auth/reset-password` - validate reset token, update password
+- [x] Add input validation using Zod for all auth endpoints
+- [x] Add proper error handling and HTTP status codes
 
 ### 1.4 User Endpoints
 
-- [ ] Implement `GET /api/users/me` - return authenticated user's profile
-- [ ] Implement `PATCH /api/users/me` - update display_name and timezone
-- [ ] Implement `DELETE /api/users/me` - cascade delete all user data and account
+- [x] Implement `GET /api/users/me` - return authenticated user's profile
+- [x] Implement `PATCH /api/users/me` - update display_name and timezone
+- [x] Implement `DELETE /api/users/me` - cascade delete all user data and account
 
 ### 1.5 Symptom Endpoints
 
-- [ ] Implement `GET /api/symptoms` - return system defaults + user's custom symptoms
-- [ ] Implement `POST /api/symptoms` - create custom symptom for user
-- [ ] Implement `PATCH /api/symptoms/:id` - update symptom (name, category, is_active)
-- [ ] Implement `DELETE /api/symptoms/:id` - delete custom symptom (prevent deleting system defaults)
-- [ ] Add validation: users can only modify their own symptoms
+- [x] Implement `GET /api/symptoms` - return system defaults + user's custom symptoms
+- [x] Implement `POST /api/symptoms` - create custom symptom for user
+- [x] Implement `PATCH /api/symptoms/:id` - update symptom (name, category, is_active)
+- [x] Implement `DELETE /api/symptoms/:id` - delete custom symptom (prevent deleting system defaults)
+- [x] Add validation: users can only modify their own symptoms
 
 ### 1.6 Symptom Log Endpoints
 
-- [ ] Implement `GET /api/symptom-logs` - return logs with date range filtering, pagination
-- [ ] Implement `POST /api/symptom-logs` - create new log with severity (1-10), optional notes
-- [ ] Implement `PATCH /api/symptom-logs/:id` - update existing log
-- [ ] Implement `DELETE /api/symptom-logs/:id` - delete log
-- [ ] Ensure users can only access their own logs
+- [x] Implement `GET /api/symptom-logs` - return logs with date range filtering, pagination
+- [x] Implement `POST /api/symptom-logs` - create new log with severity (1-10), optional notes
+- [x] Implement `PATCH /api/symptom-logs/:id` - update existing log
+- [x] Implement `DELETE /api/symptom-logs/:id` - delete log
+- [x] Ensure users can only access their own logs
 
 ### 1.7 Mood Log Endpoints
 
-- [ ] Implement `GET /api/mood-logs` - return logs with date range filtering
-- [ ] Implement `POST /api/mood-logs` - create log with mood_score (1-5), optional energy/stress
-- [ ] Implement `PATCH /api/mood-logs/:id` - update existing log
-- [ ] Implement `DELETE /api/mood-logs/:id` - delete log
+- [x] Implement `GET /api/mood-logs` - return logs with date range filtering
+- [x] Implement `POST /api/mood-logs` - create log with mood_score (1-5), optional energy/stress
+- [x] Implement `PATCH /api/mood-logs/:id` - update existing log
+- [x] Implement `DELETE /api/mood-logs/:id` - delete log
 
 ### 1.8 Medication Endpoints
 
-- [ ] Implement `GET /api/medications` - return user's medications
-- [ ] Implement `POST /api/medications` - create medication with name, optional dosage/frequency
-- [ ] Implement `PATCH /api/medications/:id` - update medication details
-- [ ] Implement `DELETE /api/medications/:id` - delete medication
+- [x] Implement `GET /api/medications` - return user's medications
+- [x] Implement `POST /api/medications` - create medication with name, optional dosage/frequency
+- [x] Implement `PATCH /api/medications/:id` - update medication details
+- [x] Implement `DELETE /api/medications/:id` - delete medication
 
 ### 1.9 Medication Log Endpoints
 
-- [ ] Implement `GET /api/medication-logs` - return logs with date range filtering
-- [ ] Implement `POST /api/medication-logs` - log medication taken/not taken
-- [ ] Implement `PATCH /api/medication-logs/:id` - update log
-- [ ] Implement `DELETE /api/medication-logs/:id` - delete log
+- [x] Implement `GET /api/medication-logs` - return logs with date range filtering
+- [x] Implement `POST /api/medication-logs` - log medication taken/not taken
+- [x] Implement `PATCH /api/medication-logs/:id` - update log
+- [x] Implement `DELETE /api/medication-logs/:id` - delete log
 
 ### 1.10 Habit Endpoints
 
-- [ ] Implement `GET /api/habits` - return system defaults + user's custom habits
-- [ ] Implement `POST /api/habits` - create custom habit with tracking_type (boolean/numeric/duration)
-- [ ] Implement `PATCH /api/habits/:id` - update habit details
-- [ ] Implement `DELETE /api/habits/:id` - delete custom habit
+- [x] Implement `GET /api/habits` - return system defaults + user's custom habits
+- [x] Implement `POST /api/habits` - create custom habit with tracking_type (boolean/numeric/duration)
+- [x] Implement `PATCH /api/habits/:id` - update habit details
+- [x] Implement `DELETE /api/habits/:id` - delete custom habit
 
 ### 1.11 Habit Log Endpoints
 
-- [ ] Implement `GET /api/habit-logs` - return logs with date range filtering
-- [ ] Implement `POST /api/habit-logs` - create log with appropriate value field based on tracking_type
-- [ ] Implement `PATCH /api/habit-logs/:id` - update log
-- [ ] Implement `DELETE /api/habit-logs/:id` - delete log
+- [x] Implement `GET /api/habit-logs` - return logs with date range filtering
+- [x] Implement `POST /api/habit-logs` - create log with appropriate value field based on tracking_type
+- [x] Implement `PATCH /api/habit-logs/:id` - update log
+- [x] Implement `DELETE /api/habit-logs/:id` - delete log
 
 ### 1.12 Backend Testing & Documentation
 
 - [x] Set up Jest for backend testing
-- [ ] Write tests for auth endpoints (register, login, token refresh)
+- [x] Write tests for auth endpoints (register, login, token refresh)
 - [x] Write tests for CRUD operations on at least one resource (e.g., symptoms)
-- [ ] Test date filtering and pagination on log endpoints
-- [ ] Document API endpoints in README or simple API docs
+- [x] Test date filtering and pagination on log endpoints
+- [x] Document API endpoints in README or simple API docs
 
 ---
 
