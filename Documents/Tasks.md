@@ -108,10 +108,10 @@ This document breaks down the WellTrack requirements into actionable development
 ### 1.12 Backend Testing & Documentation
 
 - [x] Set up Jest for backend testing
-- [ ] Write tests for auth endpoints (register, login, token refresh)
+- [x] Write tests for auth endpoints (register, login, token refresh)
 - [x] Write tests for CRUD operations on at least one resource (e.g., symptoms)
-- [ ] Test date filtering and pagination on log endpoints
-- [ ] Document API endpoints in README or simple API docs
+- [x] Test date filtering and pagination on log endpoints
+- [x] Document API endpoints in README or simple API docs
 
 ---
 
