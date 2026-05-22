@@ -50,9 +50,9 @@ This document breaks down the WellTrack requirements into actionable development
 
 ### 1.4 User Endpoints
 
-- [ ] Implement `GET /api/users/me` - return authenticated user's profile
-- [ ] Implement `PATCH /api/users/me` - update display_name and timezone
-- [ ] Implement `DELETE /api/users/me` - cascade delete all user data and account
+- [x] Implement `GET /api/users/me` - return authenticated user's profile
+- [x] Implement `PATCH /api/users/me` - update display_name and timezone
+- [x] Implement `DELETE /api/users/me` - cascade delete all user data and account
 
 ### 1.5 Symptom Endpoints
 
