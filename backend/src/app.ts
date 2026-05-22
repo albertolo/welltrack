@@ -1,6 +1,9 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import authRouter from './routes/auth';
+import usersRouter from './routes/users';
+import symptomsRouter from './routes/symptoms';
+import symptomLogsRouter from './routes/symptomLogs';
 
 const app = express();
 
@@ -12,6 +15,9 @@ app.get('/api/health', (_req, res) => {
 });
 
 app.use('/api/auth', authRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/symptoms', symptomsRouter);
+app.use('/api/symptom-logs', symptomLogsRouter);
 
 // Global error handler
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
