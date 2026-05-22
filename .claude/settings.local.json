@@ -5,7 +5,12 @@
       "PowerShell(Head *)",
       "PowerShell(Test-Path \"C:\\\\ai\\\\claude\\\\Welltrack\"; \\(Get-Item \"C:\\\\ai\\\\claude\\\\Welltrack\"\\).Attributes)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\ai\\\\claude\\\\Welltrack\" -Force -Hidden | ForEach-Object { Write-Host $_.FullName })",
-      "PowerShell(ls -Recurse \"C:\\\\ai\\\\claude\\\\Welltrack\" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })"
+      "PowerShell(ls -Recurse \"C:\\\\ai\\\\claude\\\\Welltrack\" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })",
+      "Bash(grep -E \"\\\\.\\(ts|js|json|yml|yaml\\)$\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ai\\\\claude\\\\Welltrack\\\\backend\" -File | Where-Object { $_.Extension -match '\\\\.\\(ts|js|json|yml|yaml\\)$' })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ai\\\\claude\\\\Welltrack\\\\backend\" -Directory | Where-Object { $_.Name -notmatch \"node_modules|dist\" })",
+      "Bash(git checkout *)",
+      "Bash(node ../node_modules/prisma/build/index.js db push)"
     ]
   }
 }
